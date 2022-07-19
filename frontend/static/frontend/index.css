@@ -1,0 +1,105 @@
+/*@import "~materialize-css/dist/css/materialize.min.css";*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.todo {
+  background: #f3f3f3;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  height: auto!important;
+
+}
+
+.todo.completed span {
+  text-decoration: line-through;
+  text-decoration-color: rgb(255 0 0);
+  text-decoration-thickness: 2px ;
+  font-size: 18px;
+  color: #f3f3f3;
+}
+.todo label :hover {
+  transition: .3s;
+  color: #000;
+}
+
+.completed:not {
+  color: #fff;
+}
+.todo label {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 1rem;
+  height: auto;
+}
+
+.todo span, .completed span {
+  font-size: 18px;
+  width: 60%;
+  height: auto!important;
+  overflow-x: hidden;
+}
+
+.todo i {
+  z-index: 2;
+}
+
+.completed {
+  transition: all .3s;
+  background-color: #505050;
+  color: #f3f3f3;
+}
+
+.todo span {
+  font-size: 18px!important;
+}
+
+.input-field select {
+  display: block!important;
+  position: static!important;
+  opacity: 1!important;
+  width: 100%!important;
+  pointer-events: auto!important;
+  height: auto!important;
+
+}
+
+
+.person-and-trash {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.person-and-trash strong {
+  padding-right: 35px;
+}
+
+[type="checkbox"]+span:not(.lever):before, [type="checkbox"]:not(.filled-in)+span:not(.lever):after {
+  border-radius: 5px;
+}
+.completed [type="checkbox"]+span:not(.lever):before, [type="checkbox"]:not(.filled-in)+span:not(.lever):after {
+  border-radius: 0px;
+  border-top: 2px solid transparent;
+  border-left: 2px solid transparent;
+  border-right: 2px solid #09ce07;
+  border-bottom: 2px solid #00ff33;
+}
+
+.do, .done {
+  min-height: 200px;
+
+}
+
+.input-field>label {
+  top: -25px!important;
+}
